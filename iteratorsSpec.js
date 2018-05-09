@@ -100,5 +100,3 @@ describe("#getSongCountByArtist", function(){
     expect(getSongCountByArtist(songs)["Christina Aguilera"]).to.equal(2);
   });
 });
-
-
