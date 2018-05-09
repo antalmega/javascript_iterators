@@ -74,20 +74,30 @@ describe("#getSongsByArtist", function(){
 // change xit to it so that your tests are no longer pending!
 
 describe("#summerJamCount", function(){
-  xit("needs you to write some tests!", function(){
-    // WRITE YOUR OWN TESTS!
+  it("should return a number", function(){
+    expect(summerJamCount(songs)).to.be.a('number');
+  });
+  it("should return 3 for the first 10 songs", function(){
+    const tenSongs = songs.slice(0,10);
+    expect(summerJamCount(tenSongs)).to.equal(3);
   });
 });
 
 describe("#getTotalDurationInSeconds", function(){
-  xit("needs you to write some tests!", function(){
-    // WRITE YOUR OWN TESTS!
+  it("should return a number", function(){
+    expect(getTotalDurationInSeconds(songs)).to.be.a('number');
+  });
+  it("The first three songs should return 690", function(){
+    expect(getTotalDurationInSeconds(songs.slice(0,3))).to.equal(690);
   });
 });
 
 describe("#getSongCountByArtist", function(){
-  xit("needs you to write some tests!", function(){
-    // WRITE YOUR OWN TESTS!
+  it("should return an object", function() {
+    expect(getSongCountByArtist(songs)).to.be.an('object');
+  })
+  it("Should return the correct nomber of songs for an artist", function(){
+    expect(getSongCountByArtist(songs)["Christina Aguilera"]).to.equal(2);
   });
 });
 
